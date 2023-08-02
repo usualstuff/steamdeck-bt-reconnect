@@ -1,6 +1,6 @@
 [Unit]
 Description=Save bluetooth devices before sleep
-Before=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+Before=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target shutdown.target
 
 
 [Service]
@@ -8,4 +8,4 @@ Type=oneshot
 ExecStart=/opt/steamdeck-bt-reconnect/bt-control.bash save_devices
 
 [Install]
-WantedBy=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+WantedBy=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target shutdown.target

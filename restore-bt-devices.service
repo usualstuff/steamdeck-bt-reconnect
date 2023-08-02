@@ -1,6 +1,6 @@
 [Unit]
 Description=Restore bluetooth devices connections on wake up
-After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target bluetooth.target
+After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target multi-user.target bluetooth.target 
 StartLimitBurst=10
 StartLimitIntervalSec=1
 
@@ -11,4 +11,4 @@ ExecStart=/opt/steamdeck-bt-reconnect/bt-control.bash restore_devices
 Restart=on-failure
 
 [Install]
-WantedBy=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+WantedBy=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target multi-user.target
