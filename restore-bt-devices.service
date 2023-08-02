@@ -6,7 +6,8 @@ StartLimitIntervalSec=1
 
 
 [Service]
-ExecStart=/opt/steamdeck-bt-reconnect/bt-control.bash restore_device
+Type=oneshot
+ExecStart=/opt/steamdeck-bt-reconnect/bt-control.bash restore_devices
 Restart=on-failure
 
 [Install]

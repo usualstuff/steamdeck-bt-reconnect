@@ -1,6 +1,6 @@
 [Unit]
 Description=Save bluetooth devices before sleep
-Before=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target bluetooth.target
+Before=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
 
 
 [Service]

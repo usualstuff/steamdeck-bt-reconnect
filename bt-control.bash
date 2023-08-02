@@ -8,7 +8,7 @@ save_devices() {
   # iterate over all bluetooth devices and filter out connected
   while read -r uuid
   do
-    info=`bluetoothctl info $uuid`
+    info=$(bluetoothctl info $uuid)
     if ! echo "$info" | grep -q "Connected: yes"; then
        continue
     fi
@@ -22,7 +22,7 @@ save_devices() {
   fi
 }
 
-restore_device() {
+restore_devices() {
   # if no device were connected, exit normally
   if [[ ! -f "${DEVICE_INFO_FILENAME}" ]]; then
     echo "No saved bluetooth audio device was found."
